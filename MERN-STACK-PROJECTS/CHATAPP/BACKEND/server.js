@@ -9,6 +9,10 @@ app.get('/',(req,res)=>{
     res.status(200).json({message:"server running"})
    
 })
+// AUTHENTICATION
+// 
+// middlewares
+app.use('/api/auth',authRoutes)
 app.listen(Myport,(req,res)=>{
 console.log(`Server running at port ${Myport}`)
 })
